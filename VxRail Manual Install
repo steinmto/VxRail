@@ -1,0 +1,11 @@
+python upgrade-vxm.py -c /data/store2/lcm/unpacked/bundles/VXRAIL_Manager*updaterepo.zip
+
+python upgrade-vxm.py -u /data/store2/lcm/unpacked/bundles/VXRAIL_Manager*updaterepo.zip
+
+esxcli software sources profile list -d "/vmfs/volumes/686eb1d7-f66432e1-54d6-d404e6f4cbd0/ESXi-8.0.3_24859861-e8250669.zip"
+
+ESXi_8.0.3-0.79.24859861 
+
+esxcli software profile update --depot="/vmfs/volumes/66f6fdf4-c144ef27-e591-d404e6661400/ESXi-8.0.3_24859861-e8250669.zip" --profile=ESXi_8.0.3-0.79.24859861
+
+esxcli software profile update --depot=<depot_location> --profile=<profile_name>
